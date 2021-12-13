@@ -1,0 +1,11 @@
+{
+  "name": "react-create-app1",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "大神 <1272316324@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^8.3.0"
+  }
+}

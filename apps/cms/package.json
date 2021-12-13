@@ -1,0 +1,9 @@
+{
+  "name": "@zf/cms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@arco-design/web-react": "^2.24.1"
+  }
+}
