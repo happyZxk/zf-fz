@@ -1,10 +1,13 @@
 {
-  "name": "react-create-app1",
+  "name": "@zf/create-app",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "大神 <1272316324@qq.com>",
   "homepage": "",
   "license": "ISC",
+  "bin": {
+    "zf-create-app": "./bin/index.js"
+  },
   "dependencies": {
     "commander": "^8.3.0"
   }

@@ -1,13 +1,15 @@
 {
-  "name": "root",
+  "name": "@zf/fz",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
-    "create": "node ./packages/react-create-app1/index.js"
+    "newProject": "zf-create-app"
   },
   "devDependencies": {
+    "@zf/create-app": "*",
     "lerna": "^4.0.0"
   },
   "dependencies": {
