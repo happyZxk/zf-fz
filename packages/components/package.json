@@ -1,22 +1,27 @@
 {
-  "name": "components",
+  "name": "@zf/components",
   "version": "0.0.0",
   "description": "公共组件库",
   "author": "大神 <1272316324@qq.com>",
-  "homepage": "",
+  "homepage": "https://happyzxk.github.io/zf-fz/",
   "license": "ISC",
-  "main": "lib/components.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "scripts": {
+    "start": "zf-script start",
+    "build": "zf-script build"
   },
   "files": [
-    "lib"
+    "build"
   ],
   "publishConfig": {
     "registry": "https://registry.npm.taobao.org/"
   },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+  "dependencies": {
+    "@arco-design/web-react": "^2.27.0",
+    "@zf/script": "*",
+    "@zf/types": "*",
+    "dva": "^2.4.1",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
