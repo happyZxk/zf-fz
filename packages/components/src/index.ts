@@ -1,7 +1,11 @@
 import dva from 'dva';
 import router from '@/router'
+import { createBrowserHistory } from 'history'
+
 // 1. Initialize
-const app = dva();
+const app = dva({
+    history: createBrowserHistory
+});
 
 // 2. Plugins
 // app.use({});

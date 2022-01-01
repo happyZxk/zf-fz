@@ -3,33 +3,25 @@
  *
  */
 process.env.NODE_ENV = "development";
-const fs = require("fs-extra");
 const chalk = require("chalk");
-const paths = require("../config/paths");
 const webpack = require("webpack");
 // 2. 获取webpack的config文件
 const configFactory = require("../config/webpack.config");
 
-const config = configFactory("production");
-// 3.如果build目录不为空，要把build目录清空
-fs.emptyDirSync(paths.appBuild);
-// 4. 拷贝public下面的静态文件到build目录下
-build();
+const config = configFactory("development");
+// 3 创建compiler
+const compiler = webpack(config);
+const WebpackDevServer = require("webpack-dev-server");
+const createDevServerConfig = require("../config/webpack-dev-server.config");
+const serverConfig = createDevServerConfig();
+const devServer = new WebpackDevServer(
+  { ...serverConfig, open: true, port: 3000 },
+  compiler
+);
 
-function build() {
-  //compiler 是总的编译对象
-  let compiler = webpack(config);
-  // 开启编译
-  compiler.run((err, stats) => {
-    stats.hasErrors();
-    const info = stats.toJson();
+const runServer = async () => {
+  console.log("Starting server...");
+  await devServer.start();
+};
 
-    if (err) {
-      console.error(info.errors);
-    } else if (stats.hasErrors()) {
-      console.error(info.errors);
-    } else {
-      console.log(chalk.green("Compiled successfully"));
-    }
-  });
-}
+runServer();

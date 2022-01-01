@@ -9,4 +9,5 @@ module.exports = {
   appIndexTs: resolveApp("src/index.ts"), //默认入口文件
   appBuild: resolveApp("build"), //指向打包后的输出目录 webpack默认是dist 这里是build
   appPublic: resolveApp("public"), //公共文件
+  resolveApp,
 };
