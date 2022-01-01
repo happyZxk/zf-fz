@@ -26,6 +26,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Deploy
+        uses: happyZxk/zf-fz@v1
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
