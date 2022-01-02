@@ -25,10 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build and Deploy
-        uses: happyZxk/zf-fz@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.PAGES_TOKEN }}
-          BRANCH: master
-          FOLDER: packages/components/build
-          BUILD_SCRIPT: yarn && yarn workspace @zf/components build
+      - name: 运行的命令或者 action
+          run:|
+              yarn 
+              yarn workspace @zf/components build
