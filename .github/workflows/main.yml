@@ -26,9 +26,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Deploy
-        uses: happyZxk/zf-fz
+        uses: happyZxk/zf-fz@master
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.PAGES_TOKEN }}
           BRANCH: master
           FOLDER: packages/components/build
           BUILD_SCRIPT: yarn && yarn workspace @zf/components build
