@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "dva/router";
+import { HashRouter as Router, Route, Switch } from "dva/router";
 import BaseLayout from "./layout/base-layout";
 import Home from "@/view/home";
 import About from "@/view/about";
